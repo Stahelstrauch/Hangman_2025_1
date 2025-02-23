@@ -9,8 +9,6 @@ from models.Leaderboard import Leaderboard
 from models.Database import Database
 
 
-
-
 class Model:
     def __init__(self):
         self.__image_files = [] # Tühi list piltide jaoks
@@ -109,7 +107,6 @@ class Model:
                 print(error)
             finally:
                 print('Kõik toimib!')
-
 
 
         #with open(self.__scoreboard.file_path, 'a', encoding='utf-8') as file:

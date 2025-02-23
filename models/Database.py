@@ -2,8 +2,6 @@ import os
 import random
 import sqlite3
 import sys
-from pydoc import stripid
-
 from models.Score import Score
 
 
@@ -109,8 +107,6 @@ class Database:
                 print(f'Õige sõna: {word}')
                 return word
 
-
-
     def get_categories(self):
         self.cursor.execute("SELECT DISTINCT category FROM words")
         data = self.cursor.fetchall()
@@ -119,7 +115,6 @@ class Database:
         categories.insert(0, 'Vali kategooria')
         print(f'Kategooriad: {categories}.')
         return [category.capitalize() for category in categories]
-
 
     def close(self):
         self.conn.close()
