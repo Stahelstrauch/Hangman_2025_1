@@ -1,0 +1,12 @@
+name;word;letters;game length;game time
+Unknown;lennuk;A, S;21;2025-02-06 14:31:24
+Paula;lennuk;;15;2025-02-06 14:32:08
+Lennuk;lasteaiakasvataja;R;41;2025-02-06 14:36:21
+Miisu;õpetaja;S;25;2025-02-06 14:37:29
+Linda;õpetaja;Y, U;29;2025-02-06 14:44:18
+Paul;õpetaja;L;35;2025-02-06 14:46:56
+Minasiin;lasteaiakasvataja;;49;2025-02-06 15:07:50
+MiinaSiina;lennuk;;25;2025-02-06 15:28:08
+Testikkkas;lennuk;;15;2025-02-06 15:35:15
+Tarkpea;suvila;;19;2025-02-06 17:12:36h;õpetaja;K, H, F, S, S, G, G, H, H, H;19;2025-02-20 14:54:07
+Maiiu;bussijuht;V, V, V, V, V, V, V, V, V, V, V;7;2025-02-20 19:11:16
