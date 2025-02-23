@@ -117,7 +117,6 @@ class Controller:
             messagebox.showinfo('Tühjus!', "Edetabelis andmed puuduvad!")
 
 
-
     def is_game_over(self):
         if self.model.counter >= 11 or '_' not in self.model.user_word:
             self.stopwatch.stop() # Aeg jääb seisma
