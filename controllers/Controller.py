@@ -66,7 +66,7 @@ class Controller:
         self.buttons_for_game() # Nupu majandus
         """Seadista juhuslik sõna kategooria järgi ja asendab tähed _ -ga"""
         selected_category = self.view.cmb_category.get()
-        print(f'See jama valiti: {selected_category}')
+        #print(f'See jama valiti: {selected_category}')
         self.model.start_new_game(selected_category) # Current annab indeksiga ja get annab sõnaga
         #Näita "sõna" kasutajale. Sõna on allkriipsudega
         self.view.lbl_result.config(text=self.model.user_word)

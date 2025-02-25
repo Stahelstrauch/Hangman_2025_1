@@ -87,25 +87,27 @@ class Database:
 
 
     def get_random_word(self, category=None):
-        print(f'Kas jõuab siia see info: {category}')
+        #print(f'Kas jõuab siia see info: {category}')
         if category is None:
             self.cursor.execute("SELECT word FROM words ORDER BY RANDOM() LIMIT 1")
             word = self.cursor.fetchone()
             for word in word:
-                print(f'Sõna: {word}')
+                #print(f'Sõna: {word}')
                 return word
-        elif category.lower() == 'loom':
-            self.cursor.execute("SELECT word FROM words where category=? ORDER BY RANDOM() LIMIT 1" ,('loom',))
+        elif category.lower():
+            cat = category.lower()
+            #print(cat)
+            self.cursor.execute("SELECT word FROM words where category=? ORDER BY RANDOM() LIMIT 1", (cat, ))
             word = self.cursor.fetchone()
             for word in word:
-                print(f'Nüüd selline {word}')
+                #print(f'Nüüd selline {word}')
                 return word
-        elif category.lower() == 'sõiduk':
+        """elif category.lower() == 'sõiduk':
             self.cursor.execute("SELECT word FROM words where category=? ORDER BY RANDOM() LIMIT 1", ('sõiduk',))
             word = self.cursor.fetchone()
             for word in word:
                 print(f'Õige sõna: {word}')
-                return word
+                return word"""
 
     def get_categories(self):
         self.cursor.execute("SELECT DISTINCT category FROM words")
@@ -113,7 +115,7 @@ class Database:
         categories = [category[0] for category in data]
         categories.sort()
         categories.insert(0, 'Vali kategooria')
-        print(f'Kategooriad: {categories}.')
+        #print(f'Kategooriad: {categories}.')
         return [category.capitalize() for category in categories]
 
     def close(self):
@@ -123,6 +125,7 @@ class Database:
         self.cursor.execute("select * from leaderboard")
         result = self.cursor.fetchall()
         return result
+
 
 
 

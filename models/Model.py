@@ -20,7 +20,7 @@ class Model:
         self.__scoreboard = Database()
         self.database = Database()
         self.__categories = self.database.get_categories()
-        print('Categories: ', self.categories)
+        #print('Categories: ', self.categories)
 
         self.titles = ['Poomismäng 2025', 'Kas jäid magama?', 'Ma ootan su käiku!', 'Sisesta juba see täht!', 'Äratus linnuke!', 'Sa kaotad!'] #List sõnumitega, mdia kuvatakse aknas mängu ajal iga 5 sek tagant
 
@@ -42,14 +42,14 @@ class Model:
 
 
     def start_new_game(self, category):
-        print(f'Tahan näha kas liigub edasi {category}')
+        #print(f'Tahan näha kas liigub edasi {category}')
         if category == 0 or category == "Vali kategooria":
             category = None
         self.__new_word = self.database.get_random_word(category)
-        print(self.__new_word)
+        #print(self.__new_word)
 
         #self.__new_word = self.__file_object.get_random_word(category) # Juhuslik sõna
-        print(f'Anna õige sõna: {self.__new_word}') #andis konsooli suvalise sõna
+        #print(f'Anna õige sõna: {self.__new_word}') #andis konsooli suvalise sõna
         self.__user_word = [] # Algseis
         self.__counter = 0 # Algseis
         self.__all_user_chars = [] # Algseis
@@ -57,7 +57,7 @@ class Model:
         # Asenda sõnas kõik tähed allkriipsuga M A J A => _ _ _ _
         for x in range(len(self.__new_word)):
             self.__user_word.append('_')
-        print(self.__new_word, self.__user_word) # konsooli: kasvuhoone ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_']
+        #print(self.__new_word, self.__user_word) # konsooli: kasvuhoone ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_']
 
 
     def get_user_input(self, user_input):

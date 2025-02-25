@@ -220,6 +220,7 @@ class View(Tk):
                 self.my_table.insert('', 'end', iid=str(x), values=(name, word, letters, game_length, date_time ))
                 x += 1
 
+
             """Lisa andmed tabelisse"""
             #x = 0
             #for score in data:
